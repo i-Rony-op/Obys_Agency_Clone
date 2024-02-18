@@ -1,0 +1,653 @@
+@font-face {
+  font-family: plainlight;
+  src: url("Font/plain-light-webfont.woff");
+}
+@font-face {
+  font-family: plainreg;
+  src: url("Font/plain-regular-webfont.woff");
+}
+@font-face {
+  font-family: silkitalic;
+  src: url("Font/silkserif-lightitalic-webfont.woff");
+}
+@font-face {
+  font-family: silkregitalic;
+  src: url("Font/silkserif-regularitalic-webfont.woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Nunito;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+#main {
+  position: relative;
+  background-color: #000;
+}
+
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  position: fixed;
+  z-index: 9999;
+  padding: 20vh 6vw;
+}
+.line {
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3vw;
+}
+
+#line1-part1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+#line1-part1 h5,
+#line1-part1 h6 {
+  font-family: silkregitalic;
+  font-size: 3.5vw;
+  font-weight: 100;
+}
+#line1-part1 h5 {
+  width: 5vw;
+  text-align: right;
+}
+.line h1 {
+  font-size: 6.5vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 400;
+}
+.line h2 {
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 400;
+  font-size: 5vw;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  opacity: 0;
+}
+
+#page1 {
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  position: relative;
+}
+@keyframes anime {
+  0% {
+    font-family: plainreg;
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+
+  45% {
+    font-family: silkregitalic;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 10;
+  }
+  50% {
+    font-family: plainreg;
+    -webkit-text-stroke: 1px #fff;
+    color: #fff;
+    font-weight: 500;
+    opacity: 1;
+  }
+  100% {
+    font-family: silkregitalic;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    font-weight: 500;
+    opacity: 0;
+  }
+}
+#page1 nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3.3vw 4.5vw;
+}
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* gap: 2.5vw; */
+}
+#nav-part2 h4 {
+  font-family: plainlight;
+  font-weight: 100;
+  font-size: 1.15vw;
+  position: relative;
+  z-index: 999;
+  padding: 2vw;
+}
+.hero {
+  width: 72.5%;
+  margin-left: 27.5%;
+  height: fit-content;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+}
+.hero:nth-child(2) {
+  margin-top: 6vw;
+}
+.hero h1 {
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 400;
+  line-height: 7vw;
+}
+#page1::before {
+  content: "01";
+  position: absolute;
+  font-size: 3.3vw;
+  font-family: silkitalic;
+  top: 30%;
+  left: 21%;
+}
+
+.hero h2 {
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 400;
+  line-height: 7vw;
+}
+.hero h3 {
+  font-size: 7.5vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 400;
+  line-height: 7vw;
+  margin-left: 0.5vw;
+}
+#hero3 h2 {
+  border-bottom: 5px solid #fff;
+  padding-bottom: 0.3vw;
+}
+
+#hero3 h2:nth-child(2) {
+  border-bottom: none;
+  margin-left: 0.5vw;
+}
+
+#hero3 h2:hover {
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-weight: 500;
+  border-bottom: 5px solid #ffffff00;
+}
+#flag {
+  height: 25vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* display: none; */
+}
+#hero3 {
+  width: fit-content;
+}
+#page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #151515;
+  position: relative;
+}
+#video-container {
+  width: 70vw;
+  height: 70vh;
+  position: relative;
+  left: 28%;
+  background-image: url("Image/Showreel-2022-preview-1.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#video-cursor {
+  background-color: #ffa63d;
+  height: 10.5vw;
+  width: 10.5vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -14%;
+  left: 72%;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#video-cursor i {
+  font-size: 3vw;
+}
+#video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0;
+}
+#page3 {
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  background-color: #151515;
+  padding: 0 3vw;
+}
+#page3 h1 {
+  font-size: 7.2vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  width: 60vw;
+  margin-left: 28%;
+  font-weight: 100;
+  position: relative;
+}
+#page3 h1::before {
+  content: "02";
+  font-family: silkitalic;
+  font-weight: 100;
+  position: absolute;
+  font-size: 3.3vw;
+  left: -12%;
+  top: 8%;
+}
+#image-div-container {
+  margin-top: 7vw;
+  padding: 2vw;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 3vw;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.pg3-conts h2 {
+  font-family: plainreg;
+  text-transform: uppercase;
+  font-size: 2.5vw;
+  font-weight: 400;
+  margin-bottom: 2.2vw;
+}
+.head-cont h4 {
+  margin-top: 1.5vw;
+  font-family: plainlight;
+  font-weight: 100;
+}
+.image-div {
+  height: 30vw;
+  width: 24vw;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+#image-div2 {
+  height: 40vw;
+  width: 28vw;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+#pg3-conts1 {
+  margin-top: 17vh;
+}
+#image-div3 {
+  height: 35vw;
+  width: 28vw;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#image-div4 {
+  height: 40vw;
+  width: 30vw;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.page3-circle1 {
+  width: 25vw;
+  height: 25vw;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50vh;
+  margin-left: 5vw;
+  position: relative;
+}
+
+.circle-in {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  scale: 0;
+  border-radius: 50%;
+  transition: all ease 0.5s;
+}
+.page3-circle1:hover .circle-in {
+  scale: 1;
+}
+.page3-circle1:hover .circle-in p {
+  scale: 1;
+}
+.circle-in p {
+  color: #000000;
+  transition: all ease 0.5s;
+  transition-delay: 0.6s;
+  font-size: 1vw;
+  width: 50%;
+  scale: 0;
+}
+.page3-circle1 svg {
+  width: 10vw;
+  height: 10vw;
+}
+.page3-circle2 {
+  width: 25vw;
+  height: 25vw;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.page3-circle2 svg {
+  width: 10vw;
+  height: 10vw;
+}
+#icon2 {
+  rotate: -50deg;
+}
+.page3-circle2:hover .circle-in {
+  scale: 1;
+}
+.page3-circle2:hover .circle-in p {
+  scale: 1;
+}
+._canvas_container {
+  z-index: 999999 !important;
+  pointer-events: none;
+}
+#page4 {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #151515;
+  position: relative;
+  padding-top: 5vh;
+}
+#page4 #page4-content {
+  height: 100%;
+  width: 65vw;
+  margin-left: 28%;
+  position: relative;
+}
+#page4-content h1 {
+  font-size: 7vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 100;
+  position: relative;
+}
+#page4-content h1::before {
+  content: "03";
+  position: absolute;
+  font-size: 3.3vw;
+  font-family: silkitalic;
+  top: 5%;
+  left: -10%;
+}
+
+#page4-content .underline {
+  height: 1.5px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 2vw;
+  margin-bottom: 6vw;
+}
+#page4-content p {
+  font-size: 2.5vw;
+  width: 70%;
+  line-height: 2.9vw;
+  font-weight: 500;
+  margin-bottom: 4vw;
+  font-family: plainlight;
+}
+#page4flex {
+  display: flex;
+  gap: 3vw;
+}
+#para p {
+  width: 69%;
+  font-size: 1.1vw;
+  line-height: 1.5vw;
+  font-family: plainlight;
+}
+#page4flex img {
+  width: 53%;
+  height: 60%;
+}
+#reward-block {
+  width: 45vw;
+  height: 39vw;
+  background-color: #3f7df4;
+  padding: 4vw 3vw;
+  position: relative;
+  margin-top: -19vh;
+  margin-left: 24vw;
+}
+#reward-block .rewards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1vw;
+  gap: 5vw;
+}
+
+.rewards h2 {
+  padding-top: 2.5vw;
+  font-family: plainreg;
+  font-weight: 100;
+}
+.rewards h2:nth-child(2) {
+  font-size: 1.1vw;
+  width: 46%;
+}
+.underline2 {
+  height: 1px;
+  width: 100%;
+  background-color: #fff;
+  margin-top: 2vw;
+  margin-left: 26vw;
+}
+#page5 {
+  width: 100%;
+  height: 100vh;
+  background-color: #151515;
+  position: relative;
+  padding-top: 8vw;
+}
+#page5 .elem {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.elem h1 {
+  font-size: 7vw;
+  margin-right: 10px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-family: plainreg;
+  font-weight: 100;
+  display: inline-block;
+  animation-name: elems;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+
+.elem h1 em {
+  font-family: silkitalic;
+  font-family: plainreg;
+  font-weight: 100;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+@keyframes elems {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(14px - 100%));
+  }
+}
+
+#page5 .elem1 {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+.elem1 h1 {
+  font-size: 7vw;
+  margin-right: 10px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  font-family: plainreg;
+  font-weight: 100;
+  display: inline-block;
+  animation-name: elems2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-duration: 20s;
+}
+.elem1 h1 em {
+  font-family: silkitalic;
+  font-weight: 100;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+}
+@keyframes elems2 {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(calc(14px - 0));
+  }
+}
+#footer {
+  width: 100%;
+  height: 100vh;
+  background-color: #151515;
+  position: relative;
+  padding-top: 5%;
+}
+#footer h1 {
+  font-size: 8vw;
+  width: 60vw;
+  text-transform: uppercase;
+  font-family: plainreg;
+  font-weight: 100;
+  margin-left: 28%;
+  position: relative;
+}
+
+#footer-mid {
+  width: 100%;
+  margin-left: 28%;
+  display: flex;
+}
+.box {
+  width: 26vw;
+  height: 20vw;
+  padding: 1vw 0vw;
+  margin-top: 2vw;
+}
+
+.box h5 {
+  font-family: plainreg;
+  font-weight: 100;
+  margin-bottom: 1.5vw;
+  font-size: 1.1vw;
+}
+.box h3 {
+  font-family: plainreg;
+  font-weight: 100;
+  font-size: 1.9vw;
+}
+.box a {
+  text-decoration: none;
+  font-weight: 100;
+  font-family: plainreg;
+  cursor: pointer;
+  position: relative;
+  z-index: 999;
+}
+.box a h3 {
+  font-weight: 100;
+  font-family: plainreg;
+  font-size: 1.7vw;
+}
+#mail {
+  text-decoration: underline;
+}
+#footer-bottom h4 {
+  margin-top: 2vw;
+  width: 60vw;
+  margin-left: 28%;
+  font-family: plainreg;
+  font-size: 1.3vw;
+  font-weight: 100;
+}
+#footer h1::before {
+  content: "04";
+  position: absolute;
+  font-size: 3.3vw;
+  font-family: silkitalic;
+  top: 12%;
+  left: -13%;
+}
